@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Simple CSS custom classes */
+.bg-primary {
+  background-color: #3b82f6; /* Blue-500 */
+}
+
+.text-primary {
+  color: #3b82f6;
+}
+
+.bg-primary\/10 {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.bg-primary\/20 {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.border-primary {
+  border-color: #3b82f6;
+}
+
+.hover\:bg-primary\/90:hover {
+  background-color: rgba(59, 130, 246, 0.9);
+}
+
+.hover\:text-primary\/80:hover {
+  color: rgba(59, 130, 246, 0.8);
+}
