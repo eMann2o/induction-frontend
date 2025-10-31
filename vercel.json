@@ -1,32 +1,17 @@
 {
-  "version": 3,
-  "framework": "react-router",
-  "installCommand": "npm install",
-  "buildCommand": "npm run build",
-  "outputDirectory": "build/client",
-  "functions": {
-    "api/**/*.[jt]s": {
-      "runtime": "nodejs20.x"
-    },
-    "build/server/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "routes": [
+  "version": 2,
+  "builds": [
     {
-      "src": "/build/(.*)",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      },
-      "continue": true
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/build/server/index.js"
+      "src": "package.json",
+      "use": "@vercel/static-build"
     }
   ],
-  "env": {
-    "NODE_ENV": "production",
-    "API_URL": "https://your-backend.onrender.com"
-  }
+  "buildCommand": "npm run build",
+  "outputDirectory": "build/client",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
