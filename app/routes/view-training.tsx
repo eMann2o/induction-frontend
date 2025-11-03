@@ -153,7 +153,7 @@ export default function ViewTraining() {
 
         // 1️⃣ Fetch training by ID
         const trainingRes = await axios.get<TrainingResponse>(
-          `http://localhost:3000/trainings/${id}`,
+          `${import.meta.env.VITE_API_BASE_URL}/trainings/${id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -166,7 +166,7 @@ export default function ViewTraining() {
         // 2️⃣ Fetch related question set (if exists)
         if (fetchedTraining.currentQuestionSet?._id) {
           const questionSetRes = await axios.get<QuestionSetResponse>(
-            `http://localhost:3000/questionsets/${fetchedTraining.currentQuestionSet._id}`,
+            `${import.meta.env.VITE_API_BASE_URL}/questionsets/${fetchedTraining.currentQuestionSet._id}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
 

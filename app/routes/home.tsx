@@ -38,14 +38,14 @@ export default function TraineeScan() {
       setLoading(true);
       Swal.fire({ title: "Validating...", allowOutsideClick: false, didOpen: () => Swal.showLoading() });
 
-      const res = await axios.post<ValidateResponse>(`http://localhost:3000/sessions/${id}/validate`, { phoneNumber: phoneNumber.trim() });
+      const res = await axios.post<ValidateResponse>(`${import.meta.env.VITE_API_BASE_URL}/sessions/${id}/validate`, { phoneNumber: phoneNumber.trim() });
 
       Swal.close();
 
       if (res.data?.success) {
         // Optionally store trainee/session in localStorage for quiz pages or pass via router state
         // Now fetch questions
-        const qRes = await axios.get(`http://localhost:3000/sessions/${id}/questions`);
+        const qRes = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/sessions/${id}/questions`);
         if (qRes.data?.success) {
           // navigate to a quiz page and pass questions (or store in state)
           navigate(`/sessions/${id}/quiz`, { state: { questions: qRes.data.questions, session: res.data.session, trainee: res.data.trainee } });

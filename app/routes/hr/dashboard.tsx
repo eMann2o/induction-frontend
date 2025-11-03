@@ -7,7 +7,7 @@ import AdminNavbar from "~/components/navbar";
 import Title from "~/components/Title";
 import Footer from "~/components/footer";
 
-const API_URL = "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 /* -------------------------------------------------------------------------- */
 /* 🧩 Type Definitions */

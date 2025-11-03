@@ -7,8 +7,8 @@ import AdminNavbar from "~/components/navbar";
 import Title from "~/components/Title";
 import Footer from "~/components/footer";
 
-const API_URL = "http://localhost:3000";
-const FRONTEND_URL = "http://localhost:5173";
+const API_URL = import.meta.env.VITE_API_BASE_URL;
+const FRONTEND_URL = import.meta.env.VITE_FRONTEND_URL;
 
 /* ------------------------------ Interfaces ------------------------------ */
 
