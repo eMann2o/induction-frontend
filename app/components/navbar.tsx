@@ -123,7 +123,7 @@ export default function AdminNavbar() {
               <p className="font-semibold text-sm">Authentication Required</p>
               <p className="text-xs opacity-90">Please log in to continue</p>
             </div>
-            <Link to="" className="ml-auto px-3 py-1.5 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors">
+            <Link to="/" className="ml-auto px-3 py-1.5 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors">
               Login
             </Link>
           </div>
