@@ -51,7 +51,7 @@ export default function AddUser() {
       if (!token) throw new Error("No authorization token found");
 
       const res = await axios.post(
-        "http://localhost:3000/user-add",
+        `${import.meta.env.VITE_API_BASE_URL}/user-add`,
         formData,
         {
           headers: {

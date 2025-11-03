@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { useParams, useNavigate, useLocation } from "react-router";
 import Footer from "~/components/footer";
 
-const API_URL = "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 interface Question {
   id: string;

@@ -126,7 +126,7 @@ export default function CreateTraining() {
 
       // Create training
       const trainingRes = await axios.post(
-        "http://localhost:3000/trainings",
+        `${import.meta.env.VITE_API_BASE_URL}/trainings`,
         {
           title: title.trim(),
           description: description.trim(),
@@ -158,7 +158,7 @@ export default function CreateTraining() {
 
       // add questions
       const questionsRes = await axios.post(
-        `http://localhost:3000/trainings/${trainingId}/questions`,
+        `${import.meta.env.VITE_API_BASE_URL}/trainings/${trainingId}/questions`,
         { questions: payloadQuestions },
         {
           headers: {
