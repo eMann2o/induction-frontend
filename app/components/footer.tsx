@@ -11,11 +11,15 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4 group">
-              <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-                <span className="text-white font-bold text-lg">A</span>
+              <div className="w-11 h-11 rounded-lg flex items-center justify-center overflow-hidden">
+                <img
+                  src="/logo.png"
+                  alt="Adamus Inductions Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Adamus
+                Adamus Resources Limited
               </span>
             </Link>
             <p className="text-sm text-gray-600">

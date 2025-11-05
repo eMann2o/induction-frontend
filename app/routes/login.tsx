@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import Title from "~/components/Title";
 
 export default function Login() {
+  const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -42,7 +43,7 @@ export default function Login() {
         case "hse":
           navigate("/hse");
           break;
-        
+
         default:
           navigate(redirectTo);
       }
@@ -62,10 +63,14 @@ export default function Login() {
           {/* Logo */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-11 h-11 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-lg">A</span>
+              <div className="w-11 h-11 rounded-lg flex items-center justify-center overflow-hidden">
+                <img
+                  src="/logo.png"
+                  alt="Adamus Inductions Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <span className="text-2xl font-bold text-gray-900">Adamus</span>
+              <span className="text-2xl font-bold text-gray-900">Adamus Inductions</span>
             </div>
 
             <div>
@@ -174,7 +179,6 @@ export default function Login() {
                 info
               </span>
               <div className="text-sm">
-                <p className="font-semibold text-blue-900">Demo Credentials</p>
                 <p className="text-blue-700 mt-1">
                   Contact your administrator for login credentials
                 </p>
@@ -186,47 +190,47 @@ export default function Login() {
 
       {/* Right Side - Hero Section */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 to-blue-800 flex-col justify-between p-12" style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=1000&fit=crop')`
-        }}>
-      
+        backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=1000&fit=crop')`
+      }}>
+
         <div></div>
 
         {/* Hero Content */}
-        <div className="text-white max-w-md">
+        <div className="text-black max-w-md">
           <h2 className="text-4xl font-bold mb-4">Training Excellence</h2>
-          <p className="text-blue-100 text-lg mb-8">
+          <p className="text-black-100 text-lg mb-8">
             Streamline inductions and track employee development with our comprehensive platform.
           </p>
 
           {/* Feature List */}
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <span className="material-symbols-rounded text-blue-300 flex-shrink-0 mt-1">
+              <span className="material-symbols-rounded text-black-300 flex-shrink-0 mt-1">
                 check_circle
               </span>
               <div>
-                <p className="font-semibold text-white">Easy Session Management</p>
-                <p className="text-sm text-blue-100">Create and manage training sessions effortlessly</p>
+                <p className="font-semibold text-black">Easy Session Management</p>
+                <p className="text-sm text-black-100">Create and manage training sessions effortlessly</p>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <span className="material-symbols-rounded text-blue-300 flex-shrink-0 mt-1">
+              <span className="material-symbols-rounded text-black-300 flex-shrink-0 mt-1">
                 check_circle
               </span>
               <div>
-                <p className="font-semibold text-white">Track Progress</p>
-                <p className="text-sm text-blue-100">Monitor trainee performance and completion rates</p>
+                <p className="font-semibold text-black">Track Progress</p>
+                <p className="text-sm text-black-100">Monitor trainee performance and completion rates</p>
               </div>
             </div>
 
             <div className="flex items-start gap-3">
-              <span className="material-symbols-rounded text-blue-300 flex-shrink-0 mt-1">
+              <span className="material-symbols-rounded text-black-300 flex-shrink-0 mt-1">
                 check_circle
               </span>
               <div>
-                <p className="font-semibold text-white">Role-Based Access</p>
-                <p className="text-sm text-blue-100">Secure permissions tailored to each user role</p>
+                <p className="font-semibold text-black">Role-Based Access</p>
+                <p className="text-sm text-black-100">Secure permissions tailored to each user role</p>
               </div>
             </div>
           </div>
@@ -234,7 +238,7 @@ export default function Login() {
 
         {/* Bottom Branding */}
         <div className="text-blue-100 text-sm">
-          <p>© 2025 Adamus Resources Limited. All rights reserved.</p>
+          <p>&copy; {currentYear}{" "} Adamus Resources Limited. All rights reserved.</p>
         </div>
       </div>
     </div>

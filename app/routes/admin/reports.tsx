@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import AdminNavbar from "~/components/navbar";
+import Footer from "~/components/footer";
+import Title from "~/components/Title";
 
 const API_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -184,8 +187,10 @@ export default function Reports() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Title title="Reports"/>
+      <AdminNavbar />
       <div className="flex min-h-screen w-full flex-col">
-        <main className="flex-1 px-4 py-8 sm:px-6 lg:px-8">
+        <div className="flex-1 px-4 py-8 sm:px-6 lg:px-8 py-20">
           <div className="mx-auto max-w-7xl">
             {/* Header */}
             <div className="mb-8">
@@ -616,8 +621,9 @@ export default function Reports() {
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }

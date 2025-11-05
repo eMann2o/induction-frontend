@@ -139,11 +139,15 @@ export default function AdminNavbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 flex-shrink-0 group">
-          <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-sm group-hover:shadow-md transition-all duration-200 group-hover:scale-105">
-            <span className="text-white font-bold text-lg">A</span>
-          </div>
+          <div className="w-11 h-11 rounded-lg flex items-center justify-center overflow-hidden">
+                <img
+                  src="/logo.png"
+                  alt="Adamus Inductions Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
           <span className="text-lg font-bold text-gray-900 hidden sm:inline group-hover:text-blue-600 transition-colors duration-200">
-            Adamus
+            Adamus Resources Limited
           </span>
         </Link>
 

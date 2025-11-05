@@ -37,7 +37,7 @@ export const links: Route.LinksFunction = () => [
       rel: "stylesheet",
       href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap",
     },
-    { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+    { rel: "icon", href: "/logo.png", type: "image/svg+xml" },
 ];
 
 export function meta() {
