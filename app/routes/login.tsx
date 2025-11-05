@@ -185,14 +185,17 @@ export default function Login() {
       </div>
 
       {/* Right Side - Hero Section */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 to-blue-800 flex-col justify-between p-12">
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 to-blue-800 flex-col justify-between p-12" style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=1000&fit=crop')`
+        }}>
+      
         <div></div>
 
         {/* Hero Content */}
         <div className="text-white max-w-md">
           <h2 className="text-4xl font-bold mb-4">Training Excellence</h2>
           <p className="text-blue-100 text-lg mb-8">
-            Streamline your training programs and track employee development with our comprehensive platform.
+            Streamline inductions and track employee development with our comprehensive platform.
           </p>
 
           {/* Feature List */}
@@ -231,7 +234,7 @@ export default function Login() {
 
         {/* Bottom Branding */}
         <div className="text-blue-100 text-sm">
-          <p>© 2025 Adamus Inductions. All rights reserved.</p>
+          <p>© 2025 Adamus Resources Limited. All rights reserved.</p>
         </div>
       </div>
     </div>

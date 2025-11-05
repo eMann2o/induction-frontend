@@ -1,22 +1,39 @@
-FROM node:20-alpine AS development-dependencies-env
-COPY . /app
+# --- STAGE 1: The Builder ---
+# This stage installs all dependencies (dev included) and builds the app.
+FROM node:20-alpine AS builder
 WORKDIR /app
+
+# Copy package.json and package-lock.json FIRST
+# This layer is only re-built if these files change
+COPY package.json package-lock.json ./
+
+# Install ALL dependencies (including devDependencies)
 RUN npm ci
 
-FROM node:20-alpine AS production-dependencies-env
-COPY ./package.json package-lock.json /app/
-WORKDIR /app
-RUN npm ci --omit=dev
+# Copy the rest of your source code
+# This layer is re-built if any source files change
+COPY . .
 
-FROM node:20-alpine AS build-env
-COPY . /app/
-COPY --from=development-dependencies-env /app/node_modules /app/node_modules
-WORKDIR /app
+# Run the build script
 RUN npm run build
 
+# --- STAGE 2: The Runner ---
+# This stage builds the small, final image for production.
 FROM node:20-alpine
-COPY ./package.json package-lock.json /app/
-COPY --from=production-dependencies-env /app/node_modules /app/node_modules
-COPY --from=build-env /app/build /app/build
 WORKDIR /app
+
+# Copy package.json and package-lock.json again
+COPY package.json package-lock.json ./
+
+# Install ONLY production dependencies
+RUN npm ci --omit=dev
+
+# Copy the built application from the 'builder' stage
+COPY --from=builder /app/build ./build
+
+# Expose the port your app runs on (e.g., 3000)
+# ENV PORT=3000
+# EXPOSE $PORT
+
+# The command to start your app
 CMD ["npm", "run", "start"]
