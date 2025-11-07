@@ -437,7 +437,7 @@ export default function ProfileStats() {
     const adminStats = stats as AdminStats;
     return [
       { label: "Total Users", value: adminStats.systemStats.totalUsers, icon: "group", color: "blue" as const },
-      { label: "Trainings", value: adminStats.totalTrainings, icon: "book", color: "purple" as const },
+      { label: "Inductions", value: adminStats.totalTrainings, icon: "book", color: "purple" as const },
       { label: "Sessions", value: adminStats.totalSessions, icon: "event", color: "green" as const },
     ];
   };
@@ -685,7 +685,7 @@ export default function ProfileStats() {
                     <MetricRow label="Failed" value={(stats as TraineeStats).failedAttempts} status="failed" />
                     <MetricRow label="Best Score" value={(stats as TraineeStats).bestScore} />
                     <MetricRow label="Worst Score" value={(stats as TraineeStats).worstScore} />
-                    <MetricRow label="Trainings Completed" value={(stats as TraineeStats).trainingsCompleted} />
+                    <MetricRow label="Inductions Completed" value={(stats as TraineeStats).trainingsCompleted} />
                   </div>
                 </div>
 

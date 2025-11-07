@@ -119,7 +119,7 @@ export default function CreateTraining() {
     try {
       const token = localStorage.getItem("token") ?? "";
       Swal.fire({
-        title: "Creating training...",
+        title: "Creating induction...",
         allowOutsideClick: false,
         didOpen: () => Swal.showLoading(),
       });
@@ -202,7 +202,7 @@ export default function CreateTraining() {
               <div className="mb-8">
                 <h1 className="text-3xl font-bold text-gray-900">Create Induction + Questions</h1>
                 <p className="mt-1 text-sm text-gray-600">
-                  Define the training program and add questions for the assessment.
+                  Define the induction program and add questions.
                 </p>
               </div>
 
@@ -226,7 +226,7 @@ export default function CreateTraining() {
                     <textarea
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
-                      placeholder="Short description of the training..."
+                      placeholder="Short description of the induction..."
                       className="mt-2 block w-full rounded-md border-0 p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-primary sm:text-sm"
                     />
                   </div>
@@ -253,7 +253,7 @@ export default function CreateTraining() {
                 <div className="w-full lg:w-1/2">
                   <div className="rounded-lg border border-gray-200 bg-background-light p-6 shadow-sm">
                     <h2 className="text-xl font-semibold text-gray-900">Section 2: Add Questions</h2>
-                    <p className="mt-1 text-sm text-gray-600">Create the questions for the training assessment.</p>
+                    <p className="mt-1 text-sm text-gray-600">Create the questions for the induction.</p>
 
                     <div className="mt-6 space-y-6">
                       {/* New question inputs */}

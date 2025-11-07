@@ -212,7 +212,7 @@ export default function CreateSession(): JSX.Element {
     if (!selectedTrainingId) {
       Swal.fire(
         "Missing field",
-        "Select a training program.",
+        "Select an induction.",
         "warning"
       );
       return;

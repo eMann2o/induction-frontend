@@ -226,8 +226,8 @@ export default function Dashboard() {
         if (missingTrainings.length > 0) {
           newAlerts.push({
             type: "warning",
-            title: "Trainings Missing Question Sets",
-            message: `${missingTrainings.length} training(s) have no linked question sets.`,
+            title: "Inductions Missing Question Sets",
+            message: `${missingTrainings.length} induction(s) have no linked question sets.`,
           });
         }
 
@@ -526,7 +526,7 @@ export default function Dashboard() {
               color="blue"
             />
             <StatCard
-              title="Total Trainings"
+              title="Total Inductions"
               value={stats.totalTrainings}
               icon="school"
               change="Active"

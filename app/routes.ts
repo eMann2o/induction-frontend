@@ -55,4 +55,8 @@ export default [
     /*HSE ROUTES */
     route("hse", "routes/hse/dashboard.tsx"),
     route("hse/trainings", "routes/hse/trainings.tsx"),
+    route("hse/training/:id", "routes/hse/trainingdetails.tsx"),
+
+    /**ERROR 404 */    
+    route("*", "routes/404.tsx"),
 ] satisfies RouteConfig;

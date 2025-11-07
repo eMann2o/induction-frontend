@@ -21,7 +21,7 @@ export default function AddTrainee() {
                                 </div>
                                 <div className="mb-6">
                                     <h1 className="text-3xl font-bold text-gray-900">Add New Trainee</h1>
-                                    <p className="mt-1 text-gray-600">Register a new trainee and assign them to trainings and sessions.</p>
+                                    <p className="mt-1 text-gray-600">Register a new trainee and assign them to inductions and sessions.</p>
                                 </div>
                                 <div className="rounded-lg border border-primary/20 bg-white p-6 shadow-sm">
                                     <form className="space-y-6">
@@ -60,7 +60,7 @@ export default function AddTrainee() {
                                                 <option>Leadership Induction</option>
                                                 <option>Technical Induction</option>
                                             </select>
-                                            <p className="mt-1 text-xs text-gray-500">Select one or more trainings. Use Ctrl/Cmd + click to select multiple.</p>
+                                            <p className="mt-1 text-xs text-gray-500">Select one or more inductions. Use Ctrl/Cmd + click to select multiple.</p>
                                         </div>
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700">Assigned Session(s)</label>
@@ -70,7 +70,7 @@ export default function AddTrainee() {
                                                 <option>---</option>
                                                 <option>Sales Induction - Q4 Kick-off (2024-10-15)</option>
                                             </select>
-                                            <p className="mt-1 text-xs text-gray-500">Sessions are filtered based on the selected training(s).</p>
+                                            <p className="mt-1 text-xs text-gray-500">Sessions are filtered based on the selected induction(s).</p>
                                         </div>
                                         <div className="flex justify-end gap-4 pt-4">
                                             <button className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" type="button">Cancel</button>

@@ -191,7 +191,7 @@ export default function Sessions() {
             <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
                 <h1 className="text-4xl font-bold text-gray-900">Induction Sessions</h1>
-                <p className="text-gray-600 mt-1">Manage and view all training sessions</p>
+                <p className="text-gray-600 mt-1">Manage and view all induction sessions</p>
               </div>
               <Link to="/create-session" className="flex items-center">
                 <button className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg font-medium transition-colors">

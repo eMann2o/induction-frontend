@@ -151,7 +151,7 @@ export default function Trainings() {
       const message =
         (err as AxiosError<{ message?: string }>)?.response?.data?.message ??
         (err as Error).message ??
-        "Failed to fetch trainings";
+        "Failed to fetch inductions";
       setError(message);
     } finally {
       setLoading(false);
@@ -161,7 +161,7 @@ export default function Trainings() {
   const handleDelete = async (id: string) => {
     const confirm = await Swal.fire({
       title: "Delete Induction?",
-      text: "This will permanently delete the training program. This action cannot be undone.",
+      text: "This will permanently delete the induction. This action cannot be undone.",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#dc2626",
@@ -190,7 +190,7 @@ export default function Trainings() {
     } catch (err) {
       Swal.fire(
         "Error",
-        "Failed to delete training.",
+        "Failed to delete induction.",
         "error"
       );
     }
@@ -252,7 +252,7 @@ export default function Trainings() {
                 </span>
                 <div>
                   <h2 className="text-xl font-bold text-red-900">
-                    Failed to Load Trainings
+                    Failed to Load Inductions
                   </h2>
                   <p className="text-red-700 mt-2">{error}</p>
                   <button
@@ -281,9 +281,9 @@ export default function Trainings() {
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900">Trainings</h1>
+              <h1 className="text-4xl font-bold text-gray-900">Inductions</h1>
               <p className="text-gray-600 mt-1">
-                Manage all training programs
+                Manage all inductions programs
               </p>
             </div>
             <Link to="/add-training">
@@ -302,7 +302,7 @@ export default function Trainings() {
               </span>
               <input
                 type="text"
-                placeholder="Search trainings..."
+                placeholder="Search inductions..."
                 value={search}
                 onChange={(e) => {
                   setSearch(e.target.value);
@@ -345,7 +345,7 @@ export default function Trainings() {
           {trainings.length > 0 && (
             <div className="mb-4 text-sm text-gray-600">
               Showing <span className="font-semibold">{currentTrainings.length}</span> of{" "}
-              <span className="font-semibold">{filteredTrainings.length}</span> trainings
+              <span className="font-semibold">{filteredTrainings.length}</span> inductions
             </div>
           )}
 
@@ -390,7 +390,7 @@ export default function Trainings() {
                           </td>
                           <td className="px-6 py-4 text-right">
                             <div className="flex justify-end gap-2">
-                              <Link to={`/edit-training/${t._id}`}>
+                              <Link to={`/hse/training/${t._id}`}>
                                 <button className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1">
                                   <span className="material-symbols-rounded text-lg">
                                     edit
@@ -418,7 +418,7 @@ export default function Trainings() {
                             layers_clear
                           </span>
                           <p className="text-gray-500 mt-2">
-                            {search ? "No trainings match your search" : "No trainings found"}
+                            {search ? "No inductions match your search" : "No inductions found"}
                           </p>
                         </td>
                       </tr>
@@ -444,7 +444,7 @@ export default function Trainings() {
                     layers_clear
                   </span>
                   <p className="text-gray-500 mt-2">
-                    {search ? "No trainings match your search" : "No trainings found"}
+                    {search ? "No inductions match your search" : "No inductions found"}
                   </p>
                 </div>
               )}

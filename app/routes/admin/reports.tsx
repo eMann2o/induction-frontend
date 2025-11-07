@@ -198,7 +198,7 @@ export default function Reports() {
                 Comprehensive Induction Analytics
               </h1>
               <p className="mt-2 text-gray-600">
-                Deep insights into training performance, engagement, and outcomes
+                Deep insights into induction performance, engagement, and outcomes
               </p>
             </div>
 

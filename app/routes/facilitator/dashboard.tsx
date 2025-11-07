@@ -283,7 +283,7 @@ export default function FacilitatorDashboard() {
             {/* Header */}
             <div className="mb-8">
               <h1 className="text-4xl font-bold text-gray-900">Facilitator Dashboard</h1>
-              <p className="text-gray-600 mt-1">Manage and monitor training sessions</p>
+              <p className="text-gray-600 mt-1">Manage and monitor induction sessions</p>
             </div>
 
             {/* Stats Cards */}

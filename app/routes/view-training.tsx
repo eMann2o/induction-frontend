@@ -110,19 +110,8 @@ const TrainingNotFound: React.FC = () => (
       Induction Not Found
     </h3>
     <p className="mt-2 text-gray-500">
-      We couldn't find a training session with that ID.
+      We couldn't find an induction session with that ID.
     </p>
-    <div className="mt-6">
-      <Link
-        to="/admin/trainings"
-        className="inline-flex items-center rounded-lg border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 transition-colors"
-      >
-        <span className="material-symbols-rounded -ml-1 mr-2 text-lg">
-          arrow_back
-        </span>
-        Back to Trainings List
-      </Link>
-    </div>
   </div>
 );
 
@@ -242,7 +231,7 @@ export default function ViewTraining() {
               {training.title}
             </h1>
             <p className="mt-2 text-lg text-gray-600">
-              {training.description || "No description provided for this training."}
+              {training.description || "No description provided for this induction."}
             </p>
           </div>
 
@@ -320,7 +309,7 @@ export default function ViewTraining() {
                 {!questionSet || !questionSet.questions?.length ? (
                   <p className="text-gray-500 italic p-4 bg-gray-50 rounded-lg border border-dashed border-gray-200">
                     <span className="material-symbols-rounded align-bottom text-orange-500 text-lg mr-1">warning</span>
-                    No active question set is associated with this training.
+                    No active question set is associated with this induction.
                   </p>
                 ) : (
                   <div className="space-y-6">

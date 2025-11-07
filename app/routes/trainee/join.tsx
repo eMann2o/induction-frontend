@@ -68,7 +68,7 @@ export default function JoinSessionPage() {
               Join Induction Session
             </h1>
             <p className="text-gray-600 text-sm">
-              Enter your registered phone number to access the training.
+              Enter your registered phone number to access the induction.
             </p>
           </div>
 

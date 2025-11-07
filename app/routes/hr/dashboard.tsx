@@ -281,7 +281,7 @@ export default function HRDashboard() {
           <div>
             <h1 className="text-4xl font-bold text-gray-900">HR Dashboard</h1>
             <p className="text-gray-600 mt-1">
-              Overview of trainees, facilitators, and training sessions
+              Overview of trainees, facilitators, and induction sessions
             </p>
           </div>
 

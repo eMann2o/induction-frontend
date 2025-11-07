@@ -117,7 +117,7 @@ export default function Trainings() {
         const message =
           (err as AxiosError<{ message?: string }>)?.response?.data?.message ??
           (err as Error).message ??
-          "Failed to fetch trainings";
+          "Failed to fetch inductions";
         setError(message);
       } finally {
         setLoading(false);
@@ -147,7 +147,7 @@ export default function Trainings() {
     return (
       <div>
         <AdminNavbar />
-      <Title title="Trainings" />
+      <Title title="Inductions" />
         <div className="flex min-h-screen w-full flex-col bg-gray-50">
           <main className="flex-1 px-4 sm:px-6 lg:px-8 py-20 pt-24">
             <div className="max-w-7xl mx-auto">
@@ -199,7 +199,7 @@ export default function Trainings() {
     return (
       <div>
         <AdminNavbar />
-      <Title title="Trainings" />
+      <Title title="Inductions" />
         <div className="flex min-h-screen w-full flex-col bg-gray-50">
           <main className="flex-1 px-4 sm:px-6 lg:px-8 py-20 pt-24">
             <div className="max-w-7xl mx-auto">
@@ -209,7 +209,7 @@ export default function Trainings() {
                     error
                   </span>
                   <div>
-                    <h2 className="text-xl font-bold text-red-900">Failed to Load Trainings</h2>
+                    <h2 className="text-xl font-bold text-red-900">Failed to Load Inductions</h2>
                     <p className="text-red-700 mt-2">{error}</p>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ export default function Trainings() {
   return (
     <div>
       <AdminNavbar />
-      <Title title="Trainings" />
+      <Title title="Inductions" />
       <div className="flex min-h-screen w-full flex-col bg-gray-50">
         <main className="flex-1 px-4 sm:px-6 lg:px-8 py-20 pt-24">
           <div className="max-w-7xl mx-auto">
@@ -234,8 +234,8 @@ export default function Trainings() {
             <div className="mb-8">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                 <div>
-                  <h1 className="text-4xl font-bold text-gray-900">Trainings</h1>
-                  <p className="text-gray-600 mt-1">Manage and configure training courses</p>
+                  <h1 className="text-4xl font-bold text-gray-900">Inductions</h1>
+                  <p className="text-gray-600 mt-1">Manage and configure induction courses</p>
                 </div>
                 <Link to="/add-training">
                   <button className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg font-medium transition-colors">
@@ -255,12 +255,12 @@ export default function Trainings() {
                     type="text"
                     value={search}
                     onChange={(e) => handleSearch(e.target.value)}
-                    placeholder="Search trainings..."
+                    placeholder="Search inductions..."
                     className="w-full pl-12 pr-4 py-2.5 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
                 </div>
                 <div className="bg-white rounded-lg border border-gray-200 p-4 flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Total Trainings</span>
+                  <span className="text-sm text-gray-600">Total Inductions</span>
                   <span className="text-2xl font-bold text-blue-600">{trainings.length}</span>
                 </div>
               </div>
@@ -341,7 +341,7 @@ export default function Trainings() {
                               </span>
                             </td>
                             <td className="px-6 py-4 text-right">
-                              <Link to={`/trainings/${t._id}`}>
+                              <Link to={`/hse/trainings/${t._id}`}>
                                 <button className="text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1 ml-auto">
                                   <span>View</span>
                                   <span className="material-symbols-rounded text-lg">
@@ -359,7 +359,7 @@ export default function Trainings() {
                               layers_clear
                             </span>
                             <p className="text-gray-500 mt-2">
-                              {search ? "No trainings match your search" : "No trainings found"}
+                              {search ? "No inductions match your search" : "No inductions found"}
                             </p>
                           </td>
                         </tr>
@@ -385,7 +385,7 @@ export default function Trainings() {
                       layers_clear
                     </span>
                     <p className="text-gray-500 mt-2">
-                      {search ? "No trainings match your search" : "No trainings found"}
+                      {search ? "No inductions match your search" : "No induction found"}
                     </p>
                   </div>
                 )}

@@ -71,7 +71,7 @@ export default function ViewTraining() {
         );
 
         if (!trainingRes.data.success)
-          throw new Error("Failed to load training.");
+          throw new Error("Failed to load induction.");
 
         const fetchedTraining = trainingRes.data.training;
         setTraining(fetchedTraining);
@@ -91,7 +91,7 @@ export default function ViewTraining() {
         const message =
           (err as AxiosError<{ message?: string }>)?.response?.data?.message ||
           (err as Error).message ||
-          "Failed to fetch training details.";
+          "Failed to fetch induction details.";
 
         Swal.fire({
           icon: "error",
@@ -113,7 +113,7 @@ export default function ViewTraining() {
   if (loading)
     return (
       <div className="p-12 text-center text-gray-600 animate-pulse">
-        Loading training details...
+        Loading induction details...
       </div>
     );
 
@@ -133,13 +133,6 @@ export default function ViewTraining() {
       <main className="flex-1 min-h-screen bg-background-light text-gray-800 px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8">
-            <Link
-              to="/admin/trainings"
-              className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-primary"
-            >
-              <span className="material-symbols-outlined">arrow_back</span>
-              Back to Trainings
-            </Link>
             <h1 className="mt-4 text-3xl font-bold text-gray-900">
               {training.title}
             </h1>
